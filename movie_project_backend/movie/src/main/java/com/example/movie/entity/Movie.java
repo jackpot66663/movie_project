@@ -15,6 +15,8 @@ public class Movie {
     private String director;
     private String genre;
     private String releaseDate;
+    private Integer movieTime;
+    private String moviePicture;
 
     public Long getId() {
         return id;
@@ -55,4 +57,23 @@ public class Movie {
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
+
+    
+    public Integer getMovieTime() {
+        return movieTime;
+    }
+
+    public void setMoviePicture(int movieTime) {
+        this.movieTime = movieTime;
+    }
+
+    public String getMoviePicture() {
+        return moviePicture;
+    }
+
+    public void setMoviePicture(String moviePicture) {
+        this.moviePicture = moviePicture;
+    }
+
+
 }
