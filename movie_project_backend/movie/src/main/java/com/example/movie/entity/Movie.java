@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.time.LocalDate;
+import java.util.Objects;
 
 @Entity
 public class Movie {
@@ -14,7 +16,7 @@ public class Movie {
     private String name;
     private String director;
     private String genre;
-    private String releaseDate;
+    private LocalDate releaseDate;
     private Integer movieTime;
     private String moviePicture;
 
@@ -50,11 +52,11 @@ public class Movie {
         this.genre = genre;
     }
 
-    public String getReleaseDate() {
+    public LocalDate getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(String releaseDate) {
+    public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
 
@@ -75,5 +77,16 @@ public class Movie {
         this.moviePicture = moviePicture;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Movie movie = (Movie) o;
+        return Objects.equals(name, movie.name);  // 基於 id 比較兩個 Movie 是否相等
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
 }

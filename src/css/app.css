@@ -79,9 +79,25 @@ html, body {
     cursor: pointer;
   }
 
+  .release-button{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #BFA181;
+    background-color: #0A1828;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
   .search-button:hover,
   .list-button:hover {
     background-color: #0056b3;
+    color: #000;
+  }
+
+  .release-button:hover{
+    background-color: #FFD306;
+    color: #000;
   }
 
   .loading {
@@ -106,7 +122,8 @@ html, body {
     border-collapse: collapse;
     margin-top: 20px;
     border-spacing: 0 15px;
-    }
+    margin-bottom: 150px;
+  }
 
   .movie-table th, .movie-table td {
     text-align: center; /* 居中對齊文字內容 */
@@ -184,7 +201,7 @@ html, body {
     flex-direction: column;
   }
 
-  .search-button, .list-button {
+  .search-button, .list-button .release-button {
     margin-top: 10px;
     width: 100%;
   }
