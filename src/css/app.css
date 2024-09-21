@@ -195,6 +195,16 @@ html, body {
     margin: 95px 0 0;
     font-weight: 100;
 }
+
+.movie-item-container a{
+    text-decoration: none;
+    color: #deb992;
+}
+
+.movie-item-container a:hover{
+    color: #FF5809;
+    text-decoration: none;
+}
   
 @media (max-width: 768px) {
   .search-container {
@@ -210,4 +220,5 @@ html, body {
     flex-direction: column;
     align-items: flex-start;
   }
+   
 }

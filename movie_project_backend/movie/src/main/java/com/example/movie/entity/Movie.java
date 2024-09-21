@@ -1,13 +1,21 @@
 package com.example.movie.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
 import java.time.LocalDate;
 import java.util.Objects;
+import java.util.Set;
+
+
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "movie")
 public class Movie {
 
     @Id
@@ -18,7 +26,12 @@ public class Movie {
     private String genre;
     private LocalDate releaseDate;
     private Integer movieTime;
+
+    @Column(name = "movie_picture", nullable = false)
     private String moviePicture;
+
+    @OneToMany(mappedBy = "movie")
+    private Set<Theater> theaters;
 
     public Long getId() {
         return id;

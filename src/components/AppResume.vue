@@ -25,8 +25,8 @@
             </div>
             <p class="date-range">Jan. 2020 ~ Oct. 2020</p>
             <ul class="experience-details">
-                <li>站台維運，處理如檢查 API 傳送內容以及介面呈現等問題</li>
-                <li>功能開發，新增關鍵字介面</li>
+                <li>站台維運，檢查 API 串接以及介面呈現等問題</li>
+                <li>功能開發，在sidebar中新增功能一搜尋功能，選擇篩選條件，客戶可從中獲得網路聲量關鍵字</li>
                 <li>自動化監測專案，偵測公司對外系統之錯誤和異常</li>
             </ul>
         </div>
