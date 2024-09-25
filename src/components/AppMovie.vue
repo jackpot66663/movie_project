@@ -2,7 +2,7 @@
     <div class="search-content">
       <h1 class="movie-title">SEE MOVIE</h1>
       <div class="search-container">
-        <input v-model="query" placeholder="Search movies by name,type,..." @keyup.enter="searchMovies" class="search-input"/>
+        <input v-model="query" placeholder="Search movies by name,..." @keyup.enter="searchMovies" class="search-input"/>
         <button @click="searchMovies" class="search-button">Search</button>
         <!-- <button @click="listAllMovies" class="list-button">Display All</button> -->
         <button @click="listRecentMovies" class="release-button">Out Now</button>
@@ -70,7 +70,7 @@
                 try {
                     const response = await axios.get(`http://localhost:8081/search`,{params: { query: this.query }});
                     this.movies = response.data;
-                    console.log(this.movies[0].moviePicture);
+                    // console.log(this.movies[0].moviePicture);
                 } catch (err) {
                     this.error = '查詢失敗！';
                 } finally {

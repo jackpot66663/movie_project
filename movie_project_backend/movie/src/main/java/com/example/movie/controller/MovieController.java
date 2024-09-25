@@ -17,8 +17,10 @@ import java.util.Map;
 // import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*")
+// @CrossOrigin(origins = "http://localhost:8080")
 @RestController
+
 
 public class MovieController {
 
