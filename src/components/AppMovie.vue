@@ -16,9 +16,10 @@
                 <tr>
                     <th></th>
                     <th style="width: 200px;">Name</th>
-                    <th>Director</th>
+                    <th style="width: 75px;">Director</th>
                     <th>Release Date</th>
                     <th>Time</th>
+                    <th style="width: 50px;"></th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +29,7 @@
                 <td class="movie-director">{{ movie[0].director }}</td>  
                 <td class="movie-release-date">{{ movie[0].releaseDate }}</td>
                 <td class="movie-time">{{ movie[0].movieTime }} min</td>
+                <td><button @click="addtolist(movie[0])" class="add-list-button">+</button></td>
               </tr>
             </tbody>
         </table>
@@ -35,7 +37,7 @@
       <div class = "divider" style="margin-top: 50px;"></div>
       
     </div>
-    <!-- 彈窗區域 -->
+    <!-- 場次彈窗 -->
     <div v-if="isModalOpen" class="modal-overlay">
         <div class="modal">
             <div v-for="(theater, index) in movie_theaters" :key="index" class="theater-container">
@@ -63,6 +65,10 @@
             };
         },
         methods: {
+            addtolist(movie){
+                console.log(movie.name);
+                this.$store.commit('add_list', movie); 
+            },
             async searchMovies() {
                 if (!this.query) return;
                 this.loading = true;

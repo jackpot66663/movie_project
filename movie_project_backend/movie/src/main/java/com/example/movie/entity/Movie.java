@@ -95,7 +95,7 @@ public class Movie {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Movie movie = (Movie) o;
-        return Objects.equals(name, movie.name);  // 基於 id 比較兩個 Movie 是否相等
+        return Objects.equals(name, movie.name);
     }
 
     @Override

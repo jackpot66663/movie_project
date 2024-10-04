@@ -27,6 +27,9 @@ export default {
       isFooterVisible: false,  // 初始不可見
     };
   },
+  created(){
+    console.log("App created");
+  },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
   },

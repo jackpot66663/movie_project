@@ -11,6 +11,9 @@
   <script>
   export default {
     name: 'AppSidebar',
+    created(){
+      console.log("Sidebar created")
+    },
     methods: {
     scrollToFooter(event) {
       this.$emit('scrollToFooter',event);  // 向父組件發送事件

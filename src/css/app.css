@@ -89,6 +89,18 @@ html, body {
     cursor: pointer;
   }
 
+  .add-list-button{
+    /* padding: 10px 20px; */
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    color: #BFA181;
+    background-color: #0A1828;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
   .search-button:hover,
   .list-button:hover {
     background-color: #0056b3;
@@ -96,6 +108,11 @@ html, body {
   }
 
   .release-button:hover{
+    background-color: #FFD306;
+    color: #000;
+  }
+
+  .add-list-button:hover{
     background-color: #FFD306;
     color: #000;
   }
