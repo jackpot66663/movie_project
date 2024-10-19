@@ -26,7 +26,7 @@
             <p class="date-range">Jan. 2020 ~ Oct. 2020</p>
             <ul class="experience-details">
                 <li>站台維運：使用 JS 以及 JQuery 處理網頁事件邏輯，修正按鈕事件或者篩選條件參數之錯誤</li>
-                <li>功能開發：使用 JS 以及 Java 新增一搜尋功能，讓使用者可透過時間範圍獲得各社群平台熱度關鍵字</li>
+                <li>功能開發：使用 Java 在 Spring 框架下的後端系統新增搜尋功能，使用者可透過時間範圍獲得各社群平台熱度文字雲</li>
                 <li>API 串接：使用 Postman 測試並使用 AJAX 串接後端資料，維護站台資料之正確性</li>
                 <li>站台測試：使用 Java Selenium 撰寫站台自動化監測專案，讓公司優先一步客戶獲得站台錯誤，提升服務品質</li>
             </ul>
