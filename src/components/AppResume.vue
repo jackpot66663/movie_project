@@ -3,7 +3,7 @@
     <h1 class="resume-title">My Resume</h1>
     <div class="basic-content">
         <div class="left-section">
-        <img src="https://i.postimg.cc/hv4xL0nn/2024-09-03-4-48-33.png" alt="Person Image" class="centered-image">
+        <img :src="self" alt="Person Image" class="centered-image">
         </div>
         <div class="right-section">
             <p>26 歲<br>國立中央大學<br>資訊工程研究所</p>
@@ -21,7 +21,7 @@
             <div class="experience-header">
             <h2 style="color: #deb992;">RD 實習生</h2>
             <span style="margin-left:100px">意藍資訊股份有限公司</span>
-            <img src="https://i.postimg.cc/4d07cRW6/eland.png" alt="Company Logo" class="company-logo">
+            <img :src="eland" alt="Company Logo" class="company-logo">
             </div>
             <p class="date-range">Jan. 2020 ~ Oct. 2020</p>
             <ul class="experience-details">
@@ -47,7 +47,7 @@
             <div class="experience-header">
             <h2 style="color: #deb992;">系上春酒總召</h2>
             <span style="margin-left:100px">輔仁大學資工系學會</span>
-            <img src="https://i.postimg.cc/8CFNNpcV/eat.png" alt="Activity Pic" class="activity-pic">
+            <img :src="eat" alt="Activity Pic" class="activity-pic">
             </div>
             <p class="date-range">Jan. 2019 ~ Mar. 2019</p>
             <ul class="experience-details">
@@ -65,7 +65,7 @@
             <div class="experience-header">
             <h2 style="color: #deb992;">社長</h2>
             <span style="margin-left:100px">北市延平高中熱舞社</span>
-            <img src="https://i.postimg.cc/mkWbmvbW/dance.png" alt="Activity Pic" class="activity-pic" style="margin-left:280px;">
+            <img :src="dance" alt="Activity Pic" class="activity-pic" style="margin-left:280px;">
             </div>
             <p class="date-range">Sep. 2014 ~ Jun. 2015</p>
             <ul class="experience-details">
@@ -83,7 +83,7 @@
     <h2 class="work-title">Project</h2>
     <div class="project-container">
         <h2 style="color: #deb992;">生成式AI程式設計系統</h2>
-        <img src="https://i.postimg.cc/ydgpcNKT/1-1.png" alt="Project Pic" class="project-pic">
+        <img :src="exper" alt="Project Pic" class="project-pic">
         <div>
             <ul class="project-details">
                 <li>Purpose : 幫助學生運用生成式AI於程式設計，非單純輔助學習程式設計</li>
@@ -93,7 +93,7 @@
             </ul>
         </div>
         <h3 style="color: #deb992;">系統架構</h3>
-        <img src="https://i.postimg.cc/SNdnYShM/structure.png" alt="Project Pic" class="project-pic">
+        <img :src="structure" alt="Project Pic" class="project-pic">
     </div>
     <br>
     <br>
@@ -133,7 +133,7 @@
             <li>串接後端 API，與後端工程師討論細節內容，過程中提升溝通技巧以及後端知識。</li>
             <li>以實習所獲得的 Spring Boot 知識開發個人作品集（電影搜尋系統）中的後端。</li>
             <div class="img-container">
-                <img src="https://i.postimg.cc/bvJY0kq2/S-38142184.jpg" alt="Intern Pic" class="intern-pic">
+                <img :src="intern" alt="Intern Pic" class="intern-pic">
             </div>
         </div>
         <div class="display_intro" v-if="show_ai">
@@ -145,7 +145,7 @@
             <li>45位學生，歷時兩個月的學習，學生平均成績提升17％。</li>
             <li>除了獲得生成 AI 開發經驗，也從中了解使用者注重的介面體驗為何，幫助未來在系統設計上的品質。</li>
             <div class="img-container">
-                <img src="https://i.postimg.cc/NjC9y6xZ/S-38215683.jpg" alt="Intern Pic" class="intern-pic">
+                <img :src="user" alt="Intern Pic" class="intern-pic">
             </div>
         </div>
         <div class="display_intro" v-if="show_career">
@@ -156,11 +156,26 @@
     </div>
 </template>
 <script>
-
+import structure from '@/assets/structure.png'
+import dance from '@/assets/dance.png'
+import eland from '@/assets/eland.png'
+import exper from '@/assets/exper.png'
+import eat from '@/assets/eat.png'
+import self from '@/assets/self.png'
+import intern from '@/assets/intern.jpg'
+import user from '@/assets/user.jpg'
 export default {
   name: 'AppResume',
   data() {
     return {
+      structure,
+      dance,
+      eland,
+      exper,
+      eat,
+      self,
+      intern,
+      user,
       show_team: true,
       show_learn: false,
       show_intern: false,
