@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +19,7 @@ import java.util.Map;
 // import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*",methods = {RequestMethod.POST})
 // @CrossOrigin(origins = "http://localhost:8080")
 @RestController
 
@@ -28,14 +30,14 @@ public class MovieController {
 
     private MovieService movieService;
 
-    @GetMapping("/findAll")
+    @PostMapping("/findAll")
     public Set<Movie> getAllMovies() {
         List<Movie> allmovies = movieService.getAllMovies();
         Set<Movie> uniqueMovies = new HashSet<>(allmovies);
         return uniqueMovies;
     }
 
-    @GetMapping("/search")
+    @PostMapping("/search")
     public ResponseEntity<List<Object []>> search(@RequestParam String query){
         List<Object[]> results = movieService.searchByName(query);
         return new ResponseEntity<>(results, HttpStatus.OK);
@@ -49,7 +51,7 @@ public class MovieController {
     //     return movieService.getrecentMovies(start_date,end_date);
     // }
 
-    @GetMapping("/release")
+    @PostMapping("/release")
     public List<Object[]> getrelease(){
         LocalDate end_date = LocalDate.now();
         LocalDate start_date = end_date.minusDays(31);

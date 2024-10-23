@@ -74,7 +74,7 @@
                 this.loading = true;
                 this.error = null;
                 try {
-                    const response = await axios.get(`http://localhost:8081/search`,{params: { query: this.query }});
+                    const response = await axios.post(`http://localhost:8081/search`,{params: { query: this.query }});
                     this.movies = response.data;
                     // console.log(this.movies[0].moviePicture);
                 } catch (err) {
@@ -87,7 +87,7 @@
                 this.loading = true;
                 this.error = null;
                 try {
-                    const response = await axios.get(`http://localhost:8081/findAll`);
+                    const response = await axios.post(`http://localhost:8081/findAll`);
                     this.movies = response.data;
                 } catch (err) {
                     this.error = '無法獲取電影數據，請稍後再試。';
@@ -99,7 +99,7 @@
                 this.loading = true;
                 this.error = null;
                 try {
-                    const response = await axios.get(`http://localhost:8081/release`);
+                    const response = await axios.post(`http://localhost:8081/release`);
                     this.movies = response.data;
                     // console.log(this.movies)
                 } catch (err) {
