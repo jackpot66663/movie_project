@@ -1,8 +1,8 @@
 <template>
     <aside class="app-sidebar">
       <ul>
-        <li><router-link to="/">What New</router-link></li>
-        <li><router-link to="/about">About Me</router-link></li>
+        <li><router-link to="/">About Me</router-link></li>
+        <li><router-link to="/movie">What New</router-link></li>
         <li><a href="#" @click="scrollToFooter">Contact</a></li>
       </ul>
     </aside>

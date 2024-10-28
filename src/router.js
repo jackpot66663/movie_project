@@ -3,9 +3,8 @@ import AppMovie from './components/AppMovie.vue';
 import AppResume from './components/AppResume.vue';
 
 const routes = [
-    { path:'/',redirect:'/about'},
-    { path: '/about', component: AppResume },
-    { path: '/', component: AppMovie }
+    { path: '/movie', component: AppMovie },
+    { path: '/', component: AppResume }
     
 ]
 
