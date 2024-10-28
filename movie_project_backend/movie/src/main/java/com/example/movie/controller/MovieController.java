@@ -27,7 +27,6 @@ import java.util.HashSet;
 public class MovieController {
 
     @Autowired
-
     private MovieService movieService;
 
     @PostMapping("/findAll")

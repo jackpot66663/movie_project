@@ -66,7 +66,7 @@
         },
         methods: {
             addtolist(movie){
-                console.log(movie.name);
+                // console.log(movie.name);
                 this.$store.commit('add_list', movie); 
             },
             async searchMovies() {

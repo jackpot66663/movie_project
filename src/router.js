@@ -3,8 +3,10 @@ import AppMovie from './components/AppMovie.vue';
 import AppResume from './components/AppResume.vue';
 
 const routes = [
-    { path: '/', component: AppMovie },
-    { path: '/about', component: AppResume }
+    { path:'/',redirect:'/about'},
+    { path: '/about', component: AppResume },
+    { path: '/', component: AppMovie }
+    
 ]
 
 const router = createRouter({
