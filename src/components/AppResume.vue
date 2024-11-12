@@ -19,13 +19,13 @@
         </div>
         <div class="experience-content">
             <div class="experience-header">
-            <h2 style="color: #deb992;">RD 實習生</h2>
+            <h2 style="color: #deb992;">站台後端實習生</h2>
             <span style="margin-left:100px">意藍資訊股份有限公司</span>
             <img :src="eland" alt="Company Logo" class="company-logo">
             </div>
             <p class="date-range">Jan. 2020 ~ Oct. 2020</p>
             <ul class="experience-details">
-                <li>站台維運：使用 JS 以及 JQuery 處理網頁事件邏輯，修正按鈕事件或者篩選條件參數之錯誤</li>
+                <li>站台維運：使用 JS 以及 JQuery 處理網頁事件邏輯，撰寫按鈕事件或者頁面參數之呈現問題</li>
                 <li>在 Spring 系統框架下使用 Java 新增搜尋功能，使用者可透過時間範圍獲得各社群平台熱度文字雲</li>
                 <li>API 串接：使用 Postman 測試並使用 AJAX 串接後端資料，維護站台資料之正確性</li>
                 <li>站台測試：使用 Java Selenium 撰寫站台自動化監測專案，讓公司優先一步客戶獲得站台錯誤，提升服務品質</li>
